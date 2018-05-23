@@ -1,21 +1,13 @@
 import requests
+import argparse
 
 
 def get__city_id(s_city, app_id):
     res = requests.get("http://api.openweathermap.org/data/2.5/find",
                        params={'q': s_city, 'type': 'like', 'units': 'metric', 'APPID': app_id})
     data = res.json()
-    cities = ["{} ({})".format(d['name'], d['sys']['country'])
-              for d in data['list']]
     city_id = data['list'][0]['id']
     return city_id
-
-
-def get_weather(city_id, app_id):
-    res = requests.get("http://api.openweathermap.org/data/2.5/weather",
-                       params={'id': city_id, 'units': 'metric', 'lang': 'ru', 'APPID': app_id})
-    data = res.json()
-    return data
 
 
 def get_weather_for_five_days(city_id, app_id):
@@ -24,8 +16,14 @@ def get_weather_for_five_days(city_id, app_id):
     return res.text
 
 
-app_id = "7edfb557af094b5492ed89f7e07ec190"
-city = "London"
+parser = argparse.ArgumentParser(description = 'получение прогноза погоды с сайта "http://api.openweathermap.org/"')
+parser.add_argument("--city", help = 'Город (название на английском)', default = "Moscow")
+parser.add_argument("--app_id", help = 'id из личного кабинета на сайте')
+args = parser.parse_args()
+
+
+app_id = args.app_id
+city = args.city
 corpus = 'json_dictionery'
 
 city_id = get__city_id(city, app_id)
