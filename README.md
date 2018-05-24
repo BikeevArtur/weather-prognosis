@@ -19,9 +19,14 @@ h1 Graphic weather analitic
 
 Загружает словарь из из `'json_dictionery'` в виде строки, парсит его с помощью json.loads; Выводит график зависимости температуры от времени.
 
-##### Пример: график перепада температур в Лондоне в течении 5 суток
+#### Пример № 1: график перепада температур в Лондоне в течении 5 суток
 
 
 ![Alt text](https://github.com/BikeevArtur/weather-prognosis/blob/master/Figure_0.png?raw=true "Optional Title")
 
+
 Затем (после закрытия окна с графиком) выводит круговую гистограмму с типами погоды: "пасмурно", "дождь"... в процентном соотношении.
+#### Пример № 2: диаграмма изменения погоды в Лондоне
+
+
+![Alt text](https://github.com/BikeevArtur/weather-prognosis/blob/master/Figure_1.png?raw=true "Optional Title")
