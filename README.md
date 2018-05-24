@@ -7,13 +7,13 @@ h1 Graphic weather analitic
 
 Получает на вход аргументы:
 
-    dir /--app_id(id с сайта),
-    dir /--city(необязательный, по дефолту Moscow)
+    --app_id(id с сайта),
+    --city(необязательный, по дефолту Moscow)
 
 Получает словарь с данными о погоде на каждый час в ближайшие 5 суток, выводит в файл.
 Пример:
 
-    dir /Users...\python.exe weather-prognosis.py --city London --app_id 7...0
+    Users...\python.exe weather-prognosis.py --city London --app_id 7...0
 ***
 ## weather-analisys
 
