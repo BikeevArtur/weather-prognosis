@@ -33,7 +33,7 @@ def pie_chart(dictionery):
 
 
 s = ''
-corpus = 'json_dictionery'
+corpus = 'json_dictionery.json'
 with open(corpus, 'r',  encoding="utf-8") as fout:
     for line in fout:
         s = line
