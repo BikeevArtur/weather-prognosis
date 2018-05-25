@@ -24,7 +24,7 @@ args = parser.parse_args()
 
 app_id = args.app_id
 city = args.city
-corpus = 'json_dictionery'
+corpus = 'json_dictionery.json'
 
 city_id = get__city_id(city, app_id)
 D = get_weather_for_five_days(city_id, app_id)
